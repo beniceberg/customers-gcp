@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const mongodbUri = `mongodb+srv://${process.env.DB_USERNAME}:${
   process.env.DB_PASSWORD
-}@clustercustomers-d3x22.gcp.mongodb.net/test?retryWrites=true&w=majority/ikea-gcp-db`;
+}@clustercustomers-d3x22.gcp.mongodb.net/test?retryWrites=true&w=majority`;
 
 mongoose
   .connect(mongodbUri, { useNewUrlParser: true })

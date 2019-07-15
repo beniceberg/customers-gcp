@@ -20,9 +20,9 @@ exports.addCustomer = (req, res) => {
       error: "A customer needs at least a name"
     });
 
-  const { name, age, dateOfBirth } = req.body;
+  const { name, age, dateOfBirth, email, address } = req.body;
 
-  Customer.create({ name, age, dateOfBirth }).then(customer =>
+  Customer.create({ name, age, email, address, dateOfBirth }).then(customer =>
     res.status(201).json(customer)
   );
 };
