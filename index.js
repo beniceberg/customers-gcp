@@ -1,9 +1,14 @@
+"use strict";
+
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+const routes = require("./routes");
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+require("./db");
+
+app.use(bodyParser.json());
+app.use("", routes);
 
 const server = app.listen(8080, () => {
   const host = server.address().address;
