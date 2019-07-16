@@ -5,6 +5,8 @@ const mongodbUri = `mongodb+srv://${process.env.DB_USERNAME}:${
   process.env.DB_PASSWORD
 }@clustercustomers-d3x22.gcp.mongodb.net/test?retryWrites=true&w=majority`;
 
+// const mongodbUri = `mongodb://localhost/ikea-gcp-db`;
+
 mongoose
   .connect(mongodbUri, { useNewUrlParser: true })
   .then(() => {
